@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load tags_filters %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1> Welcome to Django </h1>
+
+{% for val in book_data %}
+
+    <li>{{val.name|str_count:'o'}} - {{val.edition}} - {{val.category}}</li>
+
+{% endfor %}
+
+</body>
+</html>
