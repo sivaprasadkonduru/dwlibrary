@@ -7,13 +7,33 @@
 </head>
 <body>
 
-<h1> Welcome to Django </h1>
+<h1 align="center"> Welcome to Django </h1>
+
+<table border="2px solid black" align="center">
+    
+    <th>Name</th>
+    <th>Edition</th>
+    <th>Author</th>
+    <th>Reviews</th>
+    <th>Category</th>
+    <th>Publisher</th>
+    <th>Date of Issue</th>
+    <th>Date of Return</th>
 
 {% for val in book_data %}
 
-    <li>{{val.name|str_count:'o'}} - {{val.edition}} - {{val.category}}</li>
+    <tr>
+        <td> {{ val.name }} </td>
+        <td> {{ val.edition }} </td>
+        <td> {{ val.author }} </td>
+        <td> {{ val.reviews }} </td>
+        <td> {{ val.category }} </td>
+        <td> {{ val.publisher }} </td>
+        <td> {{ val.issued_date }} </td>
+        <td> {{ val.return_date }} </td>
+    </tr>
 
 {% endfor %}
-
+</table>
 </body>
 </html>
